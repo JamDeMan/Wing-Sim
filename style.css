@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #101b2b;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.graph-panel {
+    padding: 18px 20px 8px;
+    border-top: 1px solid #30445c;
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.legend span::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 3px;
+    margin-right: 7px;
+    vertical-align: middle;
+}
+
+.legend-target::before { background: #facc15; }
+.legend-true::before { background: #5eead4; }
+.legend-measured::before { background: #fb7185; }
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+    padding: 30px 0;
+}
+
+header h1 {
+    margin-bottom: 8px;
+    font-size: 30px;
+}
+
+header p {
+    color: #aab9cb;
+}
+
+.simulation {
+
+    margin-top: 30px;
+    background: #17283c;
+    border: 1px solid #30445c;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.controls {
+    margin: 25px auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+.mode-panel,
+.pid-panel {
+    margin: 20px 0;
+    padding: 14px;
+    border: 1px solid #30445c;
+    border-radius: 8px;
+}
+
+.mode-panel legend {
+    padding: 0 8px;
+    color: #5eead4;
+    font-weight: bold;
+}
+
+.mode-panel label {
+    margin-right: 18px;
+}
+
+.pid-panel {
+    background: rgba(16, 27, 43, 0.45);
+}
+
+.angle-display {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+#angleValue,
+#pressureValue {
+    color: #5eead4;
+    font-weight: bold;
+}
+
+input[type="range"] {
+
+    width: 100%;
+    accent-color: #5eead4;
+    cursor: pointer;
+}
+
+button {
+    margin-top: 20px;
+    padding: 11px 20px;
+    background: #5eead4;
+    color: #10202c;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #99f6e4;
+}
+
+.secondary-button {
+    margin-right: 10px;
+    background: transparent;
+    color: #5eead4;
+    border: 1px solid #5eead4;
+}
+
+.secondary-button:hover {
+    background: rgba(94, 234, 212, 0.12);
+}
+
+input[type="range"]:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+footer {
+    margin-top: 25px;
+    color: #8495aa;
+    font-size: 12px;
+}
